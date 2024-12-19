@@ -23,7 +23,7 @@ npm install
 # Install additional required packages
 npm install react-router-dom
 And
-npm install react-router-dom
+npm install axios
 
 # Start the development server
 npm run dev
