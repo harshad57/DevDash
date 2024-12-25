@@ -12,7 +12,7 @@ Make sure you have **Node.js** installed. Follow these steps to set up the proje
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/devdash.git
+git clone https://github.com/harshad57/DevDash.git
 
 # Navigate into the project directory
 cd devdash
