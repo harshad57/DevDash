@@ -31,9 +31,9 @@ const Tasks = () => {
 
   const handchange = (event) =>{
     setfilter(event.target.value);
-  };
+  };// to update the value on change
 
-  const filtertasks = filter === "Completed" ? tasks.filter((task)=>task.completed):filter === "Incompleted" ? tasks.filter((task)=>!task.completed):tasks;
+  const filtertasks = filter === "Completed" ? tasks.filter((task)=>task.completed):filter === "Incompleted" ? tasks.filter((task)=>!task.completed):tasks; //to filter the tasks
 
   const nocomplete = filter === "Completed" && filtertasks.length === 0;
   const noincomplete = filter === "Incompleted" && filtertasks.length === 0;
