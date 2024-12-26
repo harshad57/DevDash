@@ -5,6 +5,7 @@ const Tasks = () => {
     JSON.parse(localStorage.getItem("tasks")) || []
   );
   const [newTask, setNewTask] = useState("");
+  const [filter, setfilter] = useState("");
 
   const addTask = () => {
     if (!newTask.trim()) return; 
@@ -27,6 +28,15 @@ const Tasks = () => {
     setTasks(updatedTasks);
     localStorage.setItem("tasks", JSON.stringify(updatedTasks));
   };
+
+  const handchange = (event) =>{
+    setfilter(event.target.value);
+  };
+
+  const filtertasks = filter === "Completed" ? tasks.filter((task)=>task.completed):filter === "Incompleted" ? tasks.filter((task)=>!task.completed):tasks;
+
+  const nocomplete = filter === "Completed" && filtertasks.length === 0;
+  const noincomplete = filter === "Incompleted" && filtertasks.length === 0;
 
   return (
     <div style={{ padding: "1rem", maxWidth: "600px", margin: "0 auto" }}>
@@ -62,8 +72,19 @@ const Tasks = () => {
         </button>
       </div>
 
+      <div className="option">
+        <select onChange={handchange} value={filter}>
+          <option>All</option>
+          <option>Completed</option>
+          <option>Incompleted</option>
+        </select>
+      </div>
+
+      {nocomplete && (<p style={{color:"red"}}>no Completed task to show !</p>)}
+      {noincomplete && (<p style={{color:"red"}}>no Incompleted task to show !</p>)}
+
       <ul style={{ listStyleType: "none", paddingLeft: "0" }}>
-        {tasks.map((task, index) => (
+        {filtertasks.map((task, index) => (
           <li
             key={index}
             style={{
