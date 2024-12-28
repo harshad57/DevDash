@@ -10,19 +10,23 @@ Feel free to **[ fork ]** this repository to customize and enhance the functiona
 
 Make sure you have **Node.js** installed. Follow these steps to set up the project locally:
 
-```bash
-# Clone the repository
-git clone https://github.com/harshad57/DevDash.git
+1. Clone the repository
+   ```bash
+   git clone https://github.com/harshad57/DevDash.git
 
-# Navigate into the project directory
-cd devdash
+2. Navigate into the project directory
+   ```bash
+   cd devdash
 
-# Install dependencies
-npm install
+3. Install dependencies
+   ```bash
+   npm install
 
-# Install additional required packages
-npm install react-router-dom
-npm install axios
+4. Install additional required packages
+   ```bash
+   npm install react-router-dom
+   npm install axios
 
-# Start the development server
-npm run dev
+5. Start the development server
+   ```bash
+   npm run dev
