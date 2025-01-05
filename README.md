@@ -2,7 +2,7 @@
 
 **DevDash** is a frontend-only web-based productivity dashboard for developers. It allows you to manage tasks, save code snippets, and view GitHub stats in one place.
 
-Feel free to **[ fork ]** this repository to customize and enhance the functionality of DevDash!
+Feel free to **[ fork ]** this repository to customize and enhance the functionality of DevDash !
 
 ---
 
